@@ -17,31 +17,48 @@
 
 // ======================2) Check if a String is a Palindrome =====================
 // Check if a given string is a palindrome (reads the same forward and backward)
-function isPalindrome(str) {
-  let reversedStr = ""; // Variable to store the reversed string
+// function isPalindrome(str) {
+//   let reversedStr = ""; // Variable to store the reversed string
 
-  // Loop through the string in reverse order
-  for (let i = str.length - 1; i >= 0; i--) {
-    reversedStr += str[i]; // Append each character to reversedStr
-  }
+//   // Loop through the string in reverse order
+//   for (let i = str.length - 1; i >= 0; i--) {
+//     reversedStr += str[i]; // Append each character to reversedStr
+//   }
 
-  // Compare the original string with the reversed string
-  if (str === reversedStr) {
-    return true; // It's a palindrome
-  } else {
-    return false; // It's not a palindrome
-  }
-}
+//   // Compare the original string with the reversed string
+//   if (str === reversedStr) {
+//     return true; // It's a palindrome
+//   } else {
+//     return false; // It's not a palindrome
+//   }
+// }
 
-// Test the function
-let str1 = "madam";
-let str2 = "hello";
+// // Test the function
+// let str1 = "madam";
+// let str2 = "hello";
 
-console.log(isPalindrome(str1)); // Output: true
-console.log(isPalindrome(str2)); // Output: false
+// console.log(isPalindrome(str1)); // Output: true
+// console.log(isPalindrome(str2)); // Output: false
 
 // =======================3) Find the Largest Number in an Array ========================
 // Write a function to find the largest number in an array
+
+function findLargestNumber(arr) {
+  let largest = arr[0]; // Assume the first element is the largest initially
+
+  // Loop through the array to find the largest number
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > largest) {
+      largest = arr[i]; // Update the largest number if a larger one is found
+    }
+  }
+
+  return largest; // Return the largest number
+}
+
+// Test the function
+let numbers = [5, 12, 7, 22, 19];
+console.log(findLargestNumber(numbers)); // Output: 22
 
 // =======================4) Remove Duplicate Values from an Array =======================
 // Write a function to remove duplicates from an array.
