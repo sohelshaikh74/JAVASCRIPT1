@@ -17,6 +17,28 @@
 
 // ======================2) Check if a String is a Palindrome =====================
 // Check if a given string is a palindrome (reads the same forward and backward)
+function isPalindrome(str) {
+  let reversedStr = ""; // Variable to store the reversed string
+
+  // Loop through the string in reverse order
+  for (let i = str.length - 1; i >= 0; i--) {
+    reversedStr += str[i]; // Append each character to reversedStr
+  }
+
+  // Compare the original string with the reversed string
+  if (str === reversedStr) {
+    return true; // It's a palindrome
+  } else {
+    return false; // It's not a palindrome
+  }
+}
+
+// Test the function
+let str1 = "madam";
+let str2 = "hello";
+
+console.log(isPalindrome(str1)); // Output: true
+console.log(isPalindrome(str2)); // Output: false
 
 // =======================3) Find the Largest Number in an Array ========================
 // Write a function to find the largest number in an array
