@@ -43,28 +43,60 @@
 // =======================3) Find the Largest Number in an Array ========================
 // Write a function to find the largest number in an array
 
-function findLargestNumber(arr) {
-  let largest = arr[0]; // Assume the first element is the largest initially
+// function findLargestNumber(arr) {
+//   let largest = arr[0]; // Assume the first element is the largest initially
 
-  // Loop through the array to find the largest number
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] > largest) {
-      largest = arr[i]; // Update the largest number if a larger one is found
-    }
-  }
+//   // Loop through the array to find the largest number
+//   for (let i = 1; i < arr.length; i++) {
+//     if (arr[i] > largest) {
+//       largest = arr[i]; // Update the largest number if a larger one is found
+//     }
+//   }
 
-  return largest; // Return the largest number
-}
+//   return largest; // Return the largest number
+// }
 
-// Test the function
-let numbers = [5, 12, 7, 22, 19];
-console.log(findLargestNumber(numbers)); // Output: 22
+// // Test the function
+// let numbers = [5, 12, 7, 22, 19];
+// console.log(findLargestNumber(numbers)); // Output: 22
 
 // =======================4) Remove Duplicate Values from an Array =======================
 // Write a function to remove duplicates from an array.
+// function removeDuplicates(arr) {
+//   let result = []; // Create an empty array to store unique values
+
+//   for (let i = 0; i < arr.length; i++) {
+//     if (!result.includes(arr[i])) {
+//       // If the element is not in the result array
+//       result.push(arr[i]); // Add it to the result array
+//     }
+//   }
+
+//   return result; // Return the array with unique values
+// }
+
+// // Test the function
+// let numbers = [1, 2, 3, 4, 2, 1, 5];
+// let result = removeDuplicates(numbers);
+// console.log(result); // Output: [1, 2, 3, 4, 5]
 
 // =======================5) Sum of an Array =======================
 // rite a function that returns the sum of all numbers in an array
+
+// function sumOfArray(arr) {
+//     let sum = 0;  // Initialize sum to 0
+
+//     for (let i = 0; i < arr.length; i++) {
+//       sum += arr[i];  // Add each element to sum
+//     }
+
+//     return sum;  // Return the total sum
+//   }
+
+//   // Test the function
+//   let numbers = [1, 2, 3, 4, 5];
+//   let result = sumOfArray(numbers);
+//   console.log(result);  // Output: 15
 
 // ========================6) FizzBuzz ============================
 // Print numbers from 1 to 100, but for multiples of 3, print "Fizz" and for multiples of 5, print "Buzz". For numbers that are multiples of both 3 and 5, print "FizzBuzz".
