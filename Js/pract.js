@@ -1,11 +1,10 @@
-const a = 10;
-(function () {
-  console.log(a);
-  var a = 20;
-})();
-
-function myFun() {
-  console.log(a);
-  const a = 20;
+function myFun(a, b) {
+  console.log(a + b);
+  console.log(arguments);
 }
-myFun();
+// myFun(1, 2);
+
+const myFun2 = () => {
+  console.log(arguments);
+};
+myFun2();
