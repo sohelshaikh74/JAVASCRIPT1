@@ -117,3 +117,20 @@
 //   },
 // };
 // console.log(person.fullName()); // undefined undefined
+
+// ======================== PROMISE===============
+const promise = new Promise((resolve, reject) => {
+  let success = false;
+  if (success) {
+    resolve("Operation Success");
+  } else {
+    reject("Operation Failed");
+  }
+});
+promise
+  .then((resp) => {
+    console.log(resp);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
