@@ -1,67 +1,44 @@
-// function x() {
-//   // var i = 1;
-//   for (var i = 1; i <= 5; i++) {
-//     setTimeout(() => {
-//       console.log(i);
-//     }, 3000);
-//   }
-//   console.log("js");
-// }
-// x();
+// let a = 0;
+// let b = "height not defined";
+// let height;
+// // height = a == null || a == undefined ? b : a;
+// // height = a ?? b;
+// // console.log(height);
 
-// function outer() {
-//   var a = 1;
-//   function inner() {
-//     console.log(a);
-//   }
-//   return inner;
-// }
-// // let innerFunction = outer();
-// // innerFunction();
-// outer()(); // it will execute same like above
+// height = a || b;
+// console.log(height);
 
-// function outest() {
-//   let c = 20;
-//   function outer(b) {
-//     function inner() {
-//       console.log(a, b, c);
-//     }
-//     let a = 10;
-//     return inner;
-//   }
-//   return outer;
-// }
-// // let innerFunction = outer();
-// // innerFunction();
-// outest()("Hello")(); // it will execute same like above
-
-// function outest() {
-//   let c = 20;
-//   function outer(b) {
-//     function inner() {
-//       console.log(a, b, c);
-//     }
-//     let a = 10;
-//     return inner;
-//   }
-//   return outer;
-// }
-// let a = 100;
-// // let innerFunction = outer();
-// // innerFunction();
-// outest()("Hello")(); // it will execute same like above
-
-var obj = {
+let user = {
   name: "john",
-  display: () => {
-    console.log(this.name);
+  age: 28,
+  gender: "male",
+  hobbies: null,
+  contact: {
+    phone: 9619497131,
+    email: "john12@gmail.com",
+    address: {
+      street: "10th main street",
+      area: "Abey wood",
+      city: "London",
+      country: "UK",
+    },
   },
 };
-// obj.display();
-var obj1 = {
-  name: "mark",
-};
+// console.log(user.name);
+// console.log(user.birhthYear);
+// console.log(user.contact.phone);
+// console.log(user.contact.city);
+// console.log(user.contact.city.name);
+// if (user.contact.city === null || user.contact.city === undefined) {
+//   console.log(undefined);
+// } else {
+//   console.log(user.contact.city.name);
+// }
 
-obj.display.call(obj1);
+// console.log(user.contacts?.city?.name);
 
-
+// let score = "22lkjfd";
+let score = "john";
+let valueInNumber = Number(score);
+console.log(typeof valueInNumber);
+console.log(valueInNumber);
