@@ -100,6 +100,24 @@
 
 // ========================6) FizzBuzz ============================
 // Print numbers from 1 to 100, but for multiples of 3, print "Fizz" and for multiples of 5, print "Buzz". For numbers that are multiples of both 3 and 5, print "FizzBuzz".
+// for (let i = 1; i <= 100; i++) {
+//   // Check if the number is divisible by both 3 and 5
+//   if (i % 3 === 0 && i % 5 === 0) {
+//     console.log("FizzBuzz");
+//   }
+//   // Check if the number is divisible by 3
+//   else if (i % 3 === 0) {
+//     console.log("Fizz");
+//   }
+//   // Check if the number is divisible by 5
+//   else if (i % 5 === 0) {
+//     console.log("Buzz");
+//   }
+//   // If the number is not divisible by 3 or 5, print the number
+//   else {
+//     console.log(i);
+//   }
+// }
 
 // ======================== 7)Find Missing Number in an Array ==============================
 // Given an array of numbers from 1 to N with one missing number, find the missing number
@@ -109,6 +127,31 @@
 
 // ============================9)Find First Non-Repeated Character===================
 // Write a function that finds the first non-repeated character in a string.
+// function firstNonRepeatedCharacter(str) {
+//     // Create a frequency map (object) to store character counts
+//     const frequencyMap = {};
+
+//     // Count the occurrences of each character
+//     for (let i = 0; i < str.length; i++) {
+//       const char = str[i];
+//       frequencyMap[char] = (frequencyMap[char] || 0) + 1;
+//     }
+
+//     // Find the first character with a frequency of 1
+//     for (let i = 0; i < str.length; i++) {
+//       const char = str[i];
+//       if (frequencyMap[char] === 1) {
+//         return char; // Return the first non-repeated character
+//       }
+//     }
+
+//     return null; // Return null if there is no non-repeated character
+//   }
+
+//   // Test the function
+//   console.log(firstNonRepeatedCharacter("swiss"));  // Output: "w"
+//   console.log(firstNonRepeatedCharacter("aabbcc"));  // Output: null
+//   console.log(firstNonRepeatedCharacter("character"));  // Output: "c"
 
 // ===========================10)Count Occurrences of a Character in a String================
 // Write a function that counts the number of occurrences of a specific character in a string
@@ -124,6 +167,26 @@
 
 // ==========================14) Sum of Two Numbers (without using the + operator)================
 // Write a function to add two numbers without using the + operator.
+// function add(a, b) {
+//     // Loop until there is no carry
+//     while (b !== 0) {
+//       // Calculate sum without carry
+//       let sum = a ^ b;
+
+//       // Calculate carry, then shift it left by 1
+//       let carry = (a & b) << 1;
+
+//       // Assign the sum to a, and carry to b for the next iteration
+//       a = sum;
+//       b = carry;
+//     }
+
+//     return a;
+//   }
+
+//   // Test the function
+//   console.log(add(5, 3));  // Output: 8
+//   console.log(add(10, 15)); // Output: 25
 
 // =============================15)Find Intersection of Two Arrays=============================
 // Write a function that returns the intersection of two arrays (i.e., the common elements).
