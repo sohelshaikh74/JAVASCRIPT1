@@ -119,11 +119,91 @@
 //   }
 // }
 
+// ==========================7) Sum of Two Numbers (without using the + operator)================
+// Write a function to add two numbers without using the + operator.
+// function add(a, b) {
+//     // Loop until there is no carry
+//     while (b !== 0) {
+//       // Calculate sum without carry
+//       let sum = a ^ b;
+
+//       // Calculate carry, then shift it left by 1
+//       let carry = (a & b) << 1;
+
+//       // Assign the sum to a, and carry to b for the next iteration
+//       a = sum;
+//       b = carry;
+//     }
+
+//     return a;
+//   }
+
+//   // Test the function
+//   console.log(add(5, 3));  // Output: 8
+//   console.log(add(10, 15)); // Output: 25
+
 // ======================== 7)Find Missing Number in an Array ==============================
 // Given an array of numbers from 1 to N with one missing number, find the missing number
+// const arr = [1, 2, 3, 5];
+// let missingElement = [];
+
+// const missingEle = (arr) => {
+//   let maxValue = Math.max(...arr);
+//   let minValue = Math.min(...arr);
+//   console.log('Min Value:', minValue);
+//   console.log('Max Value:', maxValue);
+
+//   // Loop through the range from minValue to maxValue
+//   for (let i = minValue; i <= maxValue; i++) {
+//     if (arr.indexOf(i) < 0) {  // If i is not in the array
+//       missingElement.push(i);  // Push i to the missingElement array
+//     }
+//   }
+
+//   return missingElement;
+// };
+
+// console.log(missingEle(arr));  // Output: [4]
+
+// function findMissingNumber(arr, N) {
+//     // Calculate the expected sum of numbers from 1 to N
+//     const expectedSum = (N * (N + 1)) / 2;
+
+//     // Calculate the sum of the numbers in the array
+//     const actualSum = arr.reduce((sum, num) => sum + num, 0);
+
+//     // The missing number is the difference
+//     return expectedSum - actualSum;
+// }
+
+// // Example usage:
+// const arr = [1, 2, 4, 5, 6]; // N = 6, the missing number is 3
+// const N = 6;
+// console.log(findMissingNumber(arr, N)); // Output: 3
 
 // ==========================8)Flatten a Nested Array====================================
 // Write a function to flatten a nested array into a single array
+// function flattenArray(arr) {
+//     let result = [];
+
+//     // Iterate over each element in the array
+//     for (let i = 0; i < arr.length; i++) {
+//         // If the element is an array, recursively flatten it
+//         if (Array.isArray(arr[i])) {
+//             result = result.concat(flattenArray(arr[i]));
+//         } else {
+//             // Otherwise, add the element to the result array
+//             result.push(arr[i]);
+//         }
+//     }
+
+//     return result;
+// }
+
+// // Example usage:
+// const nestedArray = [1, [2, 3], [4, [5, 6]], 7];
+// console.log(flattenArray(nestedArray));
+// // Output: [1, 2, 3, 4, 5, 6, 7]
 
 // ============================9)Find First Non-Repeated Character===================
 // Write a function that finds the first non-repeated character in a string.
@@ -164,29 +244,6 @@
 
 // ===========================13)Throttle Function================================================
 // Implement a throttle function that ensures a function is executed at most once in a specified period of time.
-
-// ==========================14) Sum of Two Numbers (without using the + operator)================
-// Write a function to add two numbers without using the + operator.
-// function add(a, b) {
-//     // Loop until there is no carry
-//     while (b !== 0) {
-//       // Calculate sum without carry
-//       let sum = a ^ b;
-
-//       // Calculate carry, then shift it left by 1
-//       let carry = (a & b) << 1;
-
-//       // Assign the sum to a, and carry to b for the next iteration
-//       a = sum;
-//       b = carry;
-//     }
-
-//     return a;
-//   }
-
-//   // Test the function
-//   console.log(add(5, 3));  // Output: 8
-//   console.log(add(10, 15)); // Output: 25
 
 // =============================15)Find Intersection of Two Arrays=============================
 // Write a function that returns the intersection of two arrays (i.e., the common elements).
