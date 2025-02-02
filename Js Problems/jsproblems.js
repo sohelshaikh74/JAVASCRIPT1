@@ -233,8 +233,54 @@
 //   console.log(firstNonRepeatedCharacter("aabbcc"));  // Output: null
 //   console.log(firstNonRepeatedCharacter("character"));  // Output: "c"
 
-// ===========================10)Count Occurrences of a Character in a String================
+// =================================10)convert first letter in capital of each of word in javascript=============
+// Write a JavaScript function that takes a string as input and returns the string with the first letter of each word capitalized. For example, given the input "hello world", the output should be "Hello World".
+
+// **
+// const str = "hello string";
+// const firstLetterCap = (s) => {
+//   let result = s.split(" ").map((e) => e.charAt(0).toUpperCase() + e.slice(1));
+//   return result.join(" ");
+// };
+// console.log(firstLetterCap(str));
+
+// =============11)count the string length without using built in function=================
+// ***
+// let str = " hello";
+// let count = 0;
+// for (let s of str.trim()) {
+//   count++;
+// }
+// console.log("String length:" + count);
+
+// ===========================12)Count Occurrences of a Character in a String================
 // Write a function that counts the number of occurrences of a specific character in a string
+
+// ***
+// const countCharOccurrences = (str, char) => {
+//     let count = 0;
+//     // Loop through the string to count occurrences of char
+//     for (let i = 0; i < str.length; i++) {
+//       if (str[i] === char) {
+//         count++;
+//       }
+//     }
+//     return count;
+//   };
+
+//   // Example usage:
+//   const string = "hello world";
+//   const character = "l";
+//   console.log(countCharOccurrences(string, character)); // Output: 3
+
+// =====================13)Count the length of an array without using built in function
+// ***
+// let arr = [1, 2, 3, 3, 7];
+// let count = 0;
+// for (let a of arr) {
+//   count++;
+// }
+// console.log("then length of an array is:" + count);
 
 // ===========================11)Deep Clone an Object================================
 // Write a function to perform a deep clone of an object.

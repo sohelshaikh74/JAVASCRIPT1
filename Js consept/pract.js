@@ -1,21 +1,29 @@
-function flattenArray(arr) {
-  let result = [];
+// const countCharOccurrences = (str, char) => {
+//   let count = 0;
+//   // Loop through the string to count occurrences of char
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] === char) {
+//       count++;
+//     }
+//   }
+//   return count;
+// };
 
-  // Iterate over each element in the array
-  for (let i = 0; i < arr.length; i++) {
-    // If the element is an array, recursively flatten it
-    if (Array.isArray(arr[i])) {
-      result = result.concat(flattenArray(arr[i]));
-    } else {
-      // Otherwise, add the element to the result array
-      result.push(arr[i]);
-    }
+// // Example usage:
+// const string = "hello world";
+// const character = "l";
+// console.log(countCharOccurrences(string, character)); // Output: 3
+
+// // how to check given number is palindrome or not
+let num = 121;
+let numStr = String(num);
+const checkPalindrome = (nS) => {
+  let revNum = "";
+  for (let i = nS.length - 1; i >= 0; i--) {
+    revNum += nS[i];
   }
-
-  return result;
-}
-
-// Example usage:
-const nestedArray = [1, [2, 3], [4, [5, 6]], 7];
-console.log(flattenArray(nestedArray));
-// Output: [1, 2, 3, 4, 5, 6, 7]
+  if (revNum === numStr) {
+    return true;
+  } else return false;
+};
+console.log(checkPalindrome(numStr));
