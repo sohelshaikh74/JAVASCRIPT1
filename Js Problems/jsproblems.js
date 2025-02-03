@@ -282,6 +282,166 @@
 // }
 // console.log("then length of an array is:" + count);
 
+// ===============14)how to check given number is palindrome or not============
+
+// ***
+// let num = 121;
+// let numStr = String(num);
+// const checkPalindrome = (nS) => {
+//   let revNum = "";
+//   for (let i = nS.length - 1; i >= 0; i--) {
+//     revNum += nS[i];
+//   }
+//   if (revNum === numStr) {
+//     return true;
+//   } else return false;
+// };
+// console.log(checkPalindrome(numStr));
+
+// / ================15.)How to find duplicate elements in given array==============
+// const arr = [1, 2, 3, 4, 5, 2, 3, 6, 7, 8];
+
+// const findDuplicates = (arr) => {
+//   const duplicates = [];
+
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = i + 1; j < arr.length; j++) {
+//       // Check if the element is equal and not already in duplicates array
+//       if (arr[i] === arr[j] && !duplicates.includes(arr[i])) {
+//         duplicates.push(arr[i]);
+//       }
+//     }
+//   }
+
+//   return duplicates;
+// };
+
+// console.log(findDuplicates(arr)); // Output: [2, 3]
+
+// ====================16)how to find second largest value and remove first largest value in array=================
+// const arr = [1, 2, 3];
+// const secondLargest = () => {
+//   const maxValue = Math.max(...arr);
+//   const index = arr.indexOf(maxValue);
+//   arr.splice(index, 1);
+//   let secondLarg = Math.max(...arr);
+//   return secondLarg;
+// };
+// console.log(secondLargest(arr));
+
+// =====================17)How to find the factorial of a given number (n!) in JavaScript?=====================
+// const factorial = (n) => {
+//     if (n < 0) {
+//       return "Factorial of a negative number is not possible";
+//     }
+//     let result = 1;
+//     for (let i = 1; i <= n; i++) {
+//       result *= i;
+//     }
+//     return result;
+//   };
+
+//   console.log(factorial(5));  // Output: 120
+//   console.log(factorial(-3)); // Output: "Factorial of a negative number is not possible"
+
+// ========================18)How can you check if a given number is prime in JavaScript?==================
+// const isPrime = (num) => {
+//     if (num <= 1) {
+//       return false; // Numbers less than or equal to 1 are not prime
+//     }
+
+//     for (let i = 2; i <= Math.sqrt(num); i++) {
+//       if (num % i === 0) {
+//         return false; // If divisible by any number, it's not prime
+//       }
+//     }
+
+//     return true; // If no divisors found, the number is prime
+//   };
+
+//   console.log(isPrime(5));   // Output: true
+//   console.log(isPrime(10));  // Output: false
+//   console.log(isPrime(11));  // Output: true
+//   console.log(isPrime(1));   // Output: false
+
+// ======================19)How can you find all the vowels in a given string in JavaScript?===============
+// const findVowels = (str) => {
+//     const vowels = "aeiouAEIOU";
+//     let vowelsInString = [];
+
+//     for (let i = 0; i < str.length; i++) {
+//       if (vowels.includes(str[i])) {
+//         vowelsInString.push(str[i]);
+//       }
+//     }
+
+//     return vowelsInString;
+//   };
+
+//   console.log(findVowels("Hello World"));  // Output: ['e', 'o', 'o']
+//   console.log(findVowels("JavaScript"));   // Output: ['a', 'a', 'i']
+
+// ===================20)How can you swap two numbers without using a third variable in JavaScript?==============
+// let a = 5;
+// let b = 10;
+
+// console.log("Before Swap: a =", a, "b =", b);
+
+// // Swap without a third variable
+// a = a + b;  // a becomes 15 (5 + 10)
+// b = a - b;  // b becomes 5 (15 - 10)
+// a = a - b;  // a becomes 10 (15 - 5)
+
+// console.log("After Swap: a =", a, "b =", b);
+
+// =====================21)How to convert number to an array=================
+// let number = 12334;
+// let myArr = String(number)
+//   .split("")
+//   .map((e) => {
+//     return Number(e);
+//   });
+// console.log(myArr);
+
+// ======================22)count the number of digit in a number=========
+// let num = 1236;
+// let count = 0;
+// console.log(num);
+// while (num > 0) {
+//   num = parseInt(num / 10);
+//   count++;
+// }
+// console.log("number of digit in a number is:" + count);
+
+// =========================23).how to find fibonacci sequence in js============
+// fibonacci sequence is the integer sequence where first two terms are 0 and 1.after that next term is definde as the sum of the previous two terms eg- 0,1,1,2,3,5,8,...
+
+// let x = 0;
+// let y = 1;
+// for (let i = 0; i < 5; i++) {
+//   // console.log(i);
+//   let temp = x + y; //i)0+1=temp=1, ii)1+1=temp=2, ii)1+2=temp=3, iv)temp=f5 ,v)temp=8
+//   x = y; //i)0=1=>a=1,  ii)1=1=>a=1,  iii)a=2 , iv)a=3 ,v)a=5
+//   y = temp; // i)1=1,  ii)1=2=>b=2,   iii)b=3, iv)b=5 v)b=8
+//   console.log(temp); //i)1,2,3,5,8
+// }
+
+// =================24)// Program to find longest word in a given sentence
+// =====================
+// const longestSen= (sent)=>{
+//   let sentArray =  sent.split(" ")
+//   var longestWord = ""
+//   for(let i=0;i<sentArray.length-1;i++){
+//     if(sentArray[i].length > longestWord.length){
+//         longestWord = sentArray[i]
+//     }
+//   }
+//   return longestWord
+// }
+// console.log(longestSen(" Hello world  is awesome javascript "));
+
+// ====================24)How can you check if a given number is an Armstrong number in JavaScript?=======================
+
 // ===========================11)Deep Clone an Object================================
 // Write a function to perform a deep clone of an object.
 
