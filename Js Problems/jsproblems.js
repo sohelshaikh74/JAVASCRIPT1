@@ -344,7 +344,7 @@
 //   console.log(factorial(5));  // Output: 120
 //   console.log(factorial(-3)); // Output: "Factorial of a negative number is not possible"
 
-// ========================18)How can you check if a given number is prime in JavaScript?==================
+// ========================18)How can you check if a given number is prime or not in JavaScript?==================
 // const isPrime = (num) => {
 //     if (num <= 1) {
 //       return false; // Numbers less than or equal to 1 are not prime
@@ -394,7 +394,7 @@
 
 // console.log("After Swap: a =", a, "b =", b);
 
-// =====================21)How to convert number to an array=================
+// =====================21)How to convert number to an Array=================
 // let number = 12334;
 // let myArr = String(number)
 //   .split("")
@@ -473,6 +473,49 @@
 //   console.log(isArmstrong(153));  // true
 //   console.log(isArmstrong(123));  // false
 //   console.log(isArmstrong(9474)); // true
+
+// =================27)wirte a function that checks wheathter two strings are anagrams or not?==============
+
+// =================28)write a program to remove all whitespace characters from a string================
+
+// =================29)Write a javascript program to find the maximum number in an array==========
+// const findMax = (arr) => {
+//     let max = arr[0]; // Assume the first element is the maximum
+
+//     // Loop through the array to compare each element
+//     for (let i = 1; i < arr.length; i++) {
+//       if (arr[i] > max) {
+//         max = arr[i]; // Update max if a larger number is found
+//       }
+//     }
+
+//     return max; // Return the largest number
+//   };
+
+//   // Test the function
+//   const arr = [1, 2, 3, 8, 4, 10, 7];
+//   console.log(findMax(arr));  // Output: 10
+
+// ================30)want to merge two strings (str1 and str2) by alternating characters from each string. In your=============
+// let str1 = "sohel";
+// let str2 = "shaikh";
+
+// let mergedStr = "";
+
+// // Find the maximum length of the two strings
+// let maxLength = Math.max(str1.length, str2.length);
+
+// // Loop through both strings and alternate characters
+// for (let i = 0; i < maxLength; i++) {
+//   if (i < str1.length) {
+//     mergedStr += str1[i];  // Add character from str1
+//   }
+//   if (i < str2.length) {
+//     mergedStr += str2[i];  // Add character from str2
+//   }
+// }
+
+// console.log(mergedStr);  // Output: "ssohaeilh"
 
 // ===========================11)Deep Clone an Object================================
 // Write a function to perform a deep clone of an object.
