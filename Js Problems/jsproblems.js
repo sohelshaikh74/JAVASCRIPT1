@@ -413,7 +413,7 @@
 // }
 // console.log("number of digit in a number is:" + count);
 
-// =========================23).how to find fibonacci sequence in js============
+// =========================23)how to find fibonacci sequence in js============
 // fibonacci sequence is the integer sequence where first two terms are 0 and 1.after that next term is definde as the sum of the previous two terms eg- 0,1,1,2,3,5,8,...
 
 // let x = 0;
@@ -440,7 +440,39 @@
 // }
 // console.log(longestSen(" Hello world  is awesome javascript "));
 
-// ====================24)How can you check if a given number is an Armstrong number in JavaScript?=======================
+// ================25)find the smallest word in a given sentence? ================
+// const sentence = "find the small word";
+// const smallesWord = (sentence) => {
+//   let sentenceArray = sentence.split(" ");
+//   let smallest = sentenceArray[0];
+//   for (let i = 0; i < sentenceArray.length; i++) {
+//     if (sentenceArray[i] < smallest) smallest = sentenceArray[i];
+//   }
+//   return smallest;
+// };
+// console.log(smallesWord(sentence));
+
+// ====================26)How can you check if a given number is an Armstrong number in JavaScript?=======================
+// const isArmstrong = (num) => {
+//     // Convert number to string to easily extract each digit
+//     let numStr = num.toString();
+//     let numDigits = numStr.length;  // Find the number of digits
+//     let sum = 0;
+
+//     // Loop through each digit of the number
+//     for (let i = 0; i < numDigits; i++) {
+//       let digit = parseInt(numStr.charAt(i));  // Get the digit
+//       sum += Math.pow(digit, numDigits);       // Add the digit raised to the power of the number of digits
+//     }
+
+//     // Check if the sum is equal to the original number
+//     return sum === num;
+//   };
+
+//   // Test the function
+//   console.log(isArmstrong(153));  // true
+//   console.log(isArmstrong(123));  // false
+//   console.log(isArmstrong(9474)); // true
 
 // ===========================11)Deep Clone an Object================================
 // Write a function to perform a deep clone of an object.
