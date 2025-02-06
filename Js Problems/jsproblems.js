@@ -498,6 +498,24 @@
 //   console.log(isArmstrong(123));  // false
 //   console.log(isArmstrong(9474)); // true
 
+// =========================27)merg into a single array don't use built in function?===============
+// const arr = [
+//   [1, 2],
+//   [3, 4],
+//   [5, 6],
+//   [7, 8],
+// ];
+
+// let mergedArray = [];
+
+// for (let i = 0; i < arr.length; i++) {
+//   for (let j = 0; j < arr[i].length; j++) {
+//     mergedArray.push(arr[i][j]);
+//   }
+// }
+
+// console.log(mergedArray);
+
 // =================27)wirte a function that checks wheathter two strings are anagrams or not?==============
 
 // =================28)write a program to remove all whitespace characters from a string================
@@ -540,6 +558,27 @@
 // }
 
 // console.log(mergedStr);  // Output: "ssohaeilh"
+
+// ==============31)To avoid reference what we can do ?============
+// const obj1 = {
+//   test: "value",
+// };
+// const obj2=obj1
+// obj2.test="value2"
+// console.log(obj1) //{test:"value2"}
+// console.log(obj1) //{test:"value2"}
+// To Avoid refernece we can use (...spread operator)
+// const obj2 = { ...obj1 };
+// obj2.test = "value2";
+// console.log(obj1);
+// console.log(obj2);
+
+// ====================32) some() and every()=================
+// const arr = [1, 2, 3, 4];
+// const result1 = arr.some((ele) => ele > 2); //true  (it will check if the first element satisfied then give boolean value it will not check every element)
+// const result2 = arr.every((ele) => ele > 2); //false  (it will check every method wich provided condition if not every element satisfied then give false)
+// console.log(result1);
+// console.log(result2);
 
 // ************************* New Coding Practice**************
 // =================1). Given  a string, reverse a each word in the sentence
