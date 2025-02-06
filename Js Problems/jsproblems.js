@@ -453,6 +453,30 @@
 // console.log(smallesWord(sentence));
 
 // ====================26)How can you check if a given number is an Armstrong number in JavaScript?=======================
+// first way
+// let num = 1153;
+// let temp = num;
+// let sum = 0;
+
+// while (temp > 0) {
+//   let digit = temp % 10;
+
+//   // Manually calculating the cube of the digit
+//   let cube = 1;
+//   for (let i = 0; i < 3; i++) {
+//     cube *= digit;
+//   }
+
+//   sum += cube;
+//   temp = parseInt(temp / 10); // Remove the last digit
+// }
+
+// if (sum === num) {
+//   console.log(num + " is an Armstrong number");
+// } else {
+//   console.log(num + " is not an Armstrong number");
+// }
+
 // const isArmstrong = (num) => {
 //     // Convert number to string to easily extract each digit
 //     let numStr = num.toString();
@@ -496,7 +520,7 @@
 //   const arr = [1, 2, 3, 8, 4, 10, 7];
 //   console.log(findMax(arr));  // Output: 10
 
-// ================30)want to merge two strings (str1 and str2) by alternating characters from each string. In your=============
+// ================30)merge two strings (str1 and str2) by alternating characters from each string. In your=============
 // let str1 = "sohel";
 // let str2 = "shaikh";
 
@@ -516,6 +540,41 @@
 // }
 
 // console.log(mergedStr);  // Output: "ssohaeilh"
+
+// ************************* New Coding Practice**************
+// =================1). Given  a string, reverse a each word in the sentence
+// eg- how are you john
+
+// ====================2). How to check if an object is an array or not?=================
+
+// ====================3) how to empty an array ===============
+/// empty an array
+// const arr =[1,2,3,4,5]
+// **first way
+// arr.length=0;
+// console.log(arr)
+// **second way
+// arr.splice(0,arr.length)
+// console.log(arr)
+// ====================4). how would you check if given number is an integer?==============
+// don't use built in function
+// let num = 10.1;
+// console.log(num % 1 === 0);
+
+// ===================5) write a funtion to reverse a number====================
+// let num = 123;
+// let reveNum = "";
+// const reverseNumber = () => {
+//   let numStr = num.toString();
+//   for (let i = numStr.length - 1; i >= 0; i--) {
+//     reveNum += numStr[i];
+//   }
+//   return reveNum;
+// };
+// console.log(reverseNumber(num));
+// console.log(typeof Number(reveNum));
+
+// =================6) write a javascript function that returns a passed string with letters in alphabetical order
 
 // ===========================11)Deep Clone an Object================================
 // Write a function to perform a deep clone of an object.
