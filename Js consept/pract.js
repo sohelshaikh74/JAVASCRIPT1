@@ -1,45 +1,41 @@
-// reverse a string without using built in fucitons
-// check if a given string is palindrome or not
-// find the largest number in the given array
-// remove duplicate values form an aarray
-// sum of an array
-// fizzbuzz game
-// sum of two numbers**
-// find the missing number in the given array
-// flatted a nested an array
-// convert first letter of each word in capital
-// count the occurenct ot character in a given string
-// count the length of an array without using built function
-// how to check given number is palindrome or not
-// how to find duplicate element in the given an array
-// swap two number without using third variable
-// how can you find vowels in given string
-// how to find second largest element in a given string
-// find the factorial of given number
-
-let num = 5;
-const factorial = (num) => {
-  if (num < 0) {
-    return "Factorail of negative number is not possible";
-  }
+// to avoid a referecen what we can do
+// some() and every() method in js
+// write a js program to check maximum number in the given array
+// merge into a single array don't use built in fuction
+// check given number is armstrong or not
+// find the smallest word in the given sentence
+// program to find largest word in the given sentence
+// how to find fibonacci sequens in the js
+// count the number of digit in  a number
+// how to convert number to array
+// how to swap tow number without using third varialbe
+// how to find vowels in the given array
+// how to find factorial of given number
+const factorail = (n) => {
   let result = 1;
-  for (let i = 1; i <= num; i++) {
-    result *= i;
+  if (n < 0) {
+    return "factorail of negative number is not possible";
+  }
+  for (let i = 1; i <= n; i++) {
+    result = result * i;
   }
   return result;
 };
-console.log(factorial(num));
+console.log(factorail(5));
 
-// const arr = [1, 2, 3, 4, 2, 4];
-// const findDuplicates = (arr) => {
-//   const duplicates = [];
-//   for (let i = 0; i < arr.length; i++) {
-//     for (let j = i + 1; j < arr.length; j++) {
-//       if (arr[i] === arr[j] && !duplicates.includes(arr[i])) {
-//         duplicates.push(arr[i]);
-//       }
+// let str1 = "hello";
+// let str2 = "world";
+// let merged = "";
+// const mergeTowString = (str1, str2) => {
+//   let maxLength = Math.max(str1.length, str2.length);
+//   for (let i = 0; i < maxLength; i++) {
+//     if (i > str1[i]) {
+//       merged += str1[i];
+//     }
+//     if (i > str2[i]) {
+//       merged += str1[i];
 //     }
 //   }
-//   return duplicates;
+//   return merged;
 // };
-// console.log(findDuplicates(arr));
+// console.log(mergeTowString(str1, str2));

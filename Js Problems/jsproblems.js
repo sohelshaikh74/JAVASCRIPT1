@@ -580,6 +580,24 @@
 // console.log(result1);
 // console.log(result2);
 
+// =================33)To calculate the sum of the digits in a given number (e.g., 123)===============
+// const sumOfDigits = (number) => {
+//     let sum = 0;
+
+//     // Loop through each digit of the number
+//     while (number > 0) {
+let digit = number % 10; // Get the lhowast digit
+//       sum += digit;             // Add the digit to sum
+//       number = Math.floor(number / 10);  // Remove the last digit
+//     }
+
+//     return sum; // Return the sum of digits
+//   };
+
+//   // Example Usage
+//   const number = 123;
+//   console.log("Sum of digits:", sumOfDigits(number)); // Output: Sum of digits: 6
+
 // ************************* New Coding Practice**************
 // =================1). Given  a string, reverse a each word in the sentence
 // eg- how are you john
