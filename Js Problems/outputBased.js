@@ -47,4 +47,8 @@
 
 // =========6==========
 
-console.log(2 - "2"); //0
+// console.log(2 - "2"); //0
+
+// =======7====
+// console.log(+true); //1
+// console.log(!"xyz"); //false

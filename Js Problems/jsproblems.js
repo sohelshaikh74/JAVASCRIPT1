@@ -586,7 +586,7 @@
 
 //     // Loop through each digit of the number
 //     while (number > 0) {
-let digit = number % 10; // Get the lhowast digit
+// let digit = number % 10; // Get the lhowast digit
 //       sum += digit;             // Add the digit to sum
 //       number = Math.floor(number / 10);  // Remove the last digit
 //     }
