@@ -2,3 +2,5 @@
 // check if a string is a palindrome or not
 // find the largest number in the given array
 // remove duplicate element from an array
+// sum of an array
+// fizz bubzz game
