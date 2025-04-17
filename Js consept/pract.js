@@ -1,6 +1,10 @@
-// swap a number without using third variable
-let a = 2;
-let b = 6;
-a = a + b; //8
-b = a - b; //2
-a = a - b; //6
+// count the occurence in the string
+let str = "hello";
+let letter = "l";
+let count = 0;
+for (let i = 0; i <= str.length - 1; i++) {
+  if (str[i] === letter) {
+    count++;
+  }
+}
+console.log(count);
