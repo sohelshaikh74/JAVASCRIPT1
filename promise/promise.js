@@ -25,36 +25,36 @@
 //   .catch((error) => console.log(error));
 
 //Promise.all()
-let promise1 = new Promise((resolve, reject) => {
-  let success = false;
-  if (success) {
-    resolve("operation successfull");
-  } else {
-    reject("operation failed");
-  }
-});
-let promise2 = new Promise((resolve, reject) => {
-  let success = false;
-  if (success) {
-    resolve("operation successfull");
-  } else {
-    reject("operation failed");
-  }
-});
-let promise3 = new Promise((resolve, reject) => {
-  let success = false;
-  if (success) {
-    resolve("operation successfull");
-  } else {
-    reject("operation failed");
-  }
-});
+// let promise1 = new Promise((resolve, reject) => {
+//   let success = false;
+//   if (success) {
+//     resolve("operation successfull");
+//   } else {
+//     reject("operation failed");
+//   }
+// });
+// let promise2 = new Promise((resolve, reject) => {
+//   let success = false;
+//   if (success) {
+//     resolve("operation successfull");
+//   } else {
+//     reject("operation failed");
+//   }
+// });
+// let promise3 = new Promise((resolve, reject) => {
+//   let success = false;
+//   if (success) {
+//     resolve("operation successfull");
+//   } else {
+//     reject("operation failed");
+//   }
+// });
 
 // Promise.all([promise1, promise2, promise3])  // it will check all promise are resolve or not if one of them reject then promise also get rejected
 //   .then((result) => console.log(result))
 //   .catch((error) => console.log(error));
 
-//   Promise.race()  // check only first one promsie resovel or not if first one is reject then promise get rejected
+//   Promise.race()  // Promise.race() it will return fisrt settled promise either  only first one promsie is resovel or either  first one is reject then promise get rejected and if the first one is resolve then promise get resolve
 // Promise.race([promise1, promise2, promise3])
 //   .then((result) => console.log(result))
 //   .catch((error) => console.log(error));
@@ -64,6 +64,47 @@ let promise3 = new Promise((resolve, reject) => {
 //   console.log(result)
 // );
 
-Promise.any([promise1, promise2, promise3]) // .any()  check one of them true( not check sequcnly check randomly) then give promise resolve
-  .then((result) => console.log(result))
-  .catch((error) => console.log(error));
+// Promise.any([promise1, promise2, promise3]) // .any()  check one of them true( not check sequcnly check randomly) then give promise resolve
+//   .then((result) => console.log(result))
+//   .catch((error) => console.log(error));
+
+// //ex of Promise.race()
+
+// let getData = function (url, error = "something went wrong") {
+//   return fetch(url).then((res) => {
+//     if (!res.ok) {
+//       throw new Error(`${error} ${res.status}`);
+//     }
+//     return res.json();
+//   });
+// };
+
+let getData = function (url, error = "something went wrong") {
+  return fetch(url).then((res) => {
+    if (!res.ok) {
+      throw new Error(`${error} ${res.status}`);
+    }
+    return res.json();
+  });
+};
+
+let getCountriesInfo = async function () {
+  const data = await Promise.race([
+    getData("https://restcountries.com/v2/name/usa"),
+    getData("https://restcountries.com/v2/name/brazil"),
+    getData("https://restcountries.com/v2/name/germany"),
+  ]);
+  console.log(data);
+  // console.log(data.map((x) => x[0].name));
+};
+// getCountriesInfo();
+
+Promise.race([
+  Promise.reject("data 1"),
+  Promise.reject("data 2"),
+  Promise.resolve("data 3"),
+])
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => console.error(error));
