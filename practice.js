@@ -1,16 +1,4 @@
-let user = {
-    name: "sohel",
-    address: {
-        city: "Mumbai",
-        country: "India"
-    }
+function add(a, b) {
+    return a + b;
 }
-//withoug optional chaning
-console.log(user.address.city)
-console.log(user.contact?.phone)
-
-let userss = {
-    greet: () => 'hello'
-}
-console.log(userss.greet?.())
-console.log(userss.sayGoodBye?.())
+console.log(add(5, 6));
